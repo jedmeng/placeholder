@@ -2,23 +2,19 @@
 
 require ('Placeholder.class.php');
 
-$path = $_SERVER['REDIRECT_URL'];
-
-// 默认展示帮助页面
-if (!$path) {
-	die(file_get_contents('help.html'));
-}
-
-
 // 参数数组
 $opts = array();
 
-// 从path中提取参数
-if (preg_match('/^(.*)\.([a-z]{3,4})$/', $path, $match)) {
-	list( , $path, $opts['format']) = $match;
-}
+// 如果使用了rewrite，从path中提取参数
+if (isset($_SERVER['REDIRECT_URL'])) {
+	$path = $_SERVER['REDIRECT_URL'];
 
-list($opts['size'], $opts['bgColor'], $opts['color'], $opts['text']) = explode('/', substr($path, 1) . '///');
+	if (preg_match('/^(.*)\.([a-z]{3,4})$/', $path, $match)) {
+		list( , $path, $opts['format']) = $match;
+	}
+
+	list($opts['size'], $opts['bgColor'], $opts['color'], $opts['text']) = explode('/', substr($path, 1) . '///');
+}
 
 // 从query中提取参数
 $args = ['width', 'height', 'format', 'text', 'size', 'fontSize', 'color', 'bgColor'];
@@ -49,6 +45,10 @@ if (isset($opts['fontSize'])) {
 	unset($opts['size']);
 }
 
+// 默认展示帮助页面
+if (!$opts['width']) {
+	die(file_get_contents('help.html'));
+}
 
 // 输出图片
 $placeholder = new Placeholder($opts);

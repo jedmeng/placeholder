@@ -12,6 +12,8 @@ class Placeholder {
 	const DEFAULT_COLOR = '969696';
 	const DEFAULT_BG_COLOR = 'CCCCCC';
 
+	const CACHE_EXPIRES = 315360000;//60 * 60 * 24 * 365 * 10;
+
 	/**
 	 * @var array 允许的格式列表
 	 */
@@ -137,7 +139,7 @@ class Placeholder {
 	 */
 	function showImage() {
 		header('Content-Type: ' . $this->getContentType());
-		header('Expires: ' . gmdate('D, d M Y H:i:s', time() + 60 * 60 * 24 * 365 * 10) . ' GMT');
+		header('Expires: ' . gmdate('D, d M Y H:i:s', time() + self::CACHE_EXPIRES) . ' GMT');
 		die($this->getImage());
 	}
 
@@ -194,8 +196,7 @@ class Placeholder {
 			'x' => ($this->width - ($x2 - $x1)) / 2,
 			'y' => ($this->height - ($y1 + $y2)) / 2,
 			'width' => $x2 - $x1,
-			'height' => $y2 - $y1,
-			//'y' => ($this->height - $y1) / 2
+			'height' => $y2 - $y1
 		);
 	}
 }
