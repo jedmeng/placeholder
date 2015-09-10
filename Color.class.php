@@ -150,7 +150,7 @@ class Color {
 	);
 
 	/**
-	 * @var array() RGB数组
+	 * @var array RGB数组
 	 */
 	private $color;
 

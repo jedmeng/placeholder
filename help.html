@@ -2,9 +2,50 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title></title>
+	<title>占位图使用帮助</title>
+	<link rel="stylesheet" href="http://s4.qhimg.com/!4e82d041/typo.css">
+	<style>
+		html {
+			background: #f5f5f5;
+		}
+
+		#content {
+			width: 960px;
+			margin: 20px auto;
+		}
+
+		a {
+			color: #08c;
+			text-decoration: none;
+		}
+
+		pre, code, tt {
+			font-family: Consolas,"Liberation Mono",Courier,monospace;
+		}
+
+		code {
+			background: #FEE9CC;
+			padding: 0 0.2em;
+			margin: 0 0.1em;
+			border-radius: 3px;
+		}
+	</style>
 </head>
 <body>
-help
+	<div id="content">加载中...</div>
+	<script src="http://s7.qhimg.com/lib/jquery/1102.js"></script>
+	<script src="http://s7.qhimg.com/!4e82d041/marked.js"></script>
+<script>
+	$(function() {
+		$.get('README.md', function(text) {
+			marked.setOptions({
+				gfm: true,
+				breaks: true
+			});
+			var html = marked(text.replace(/\{domain\}/g, location.host));
+			$('#content').html(html);
+		})
+	});
+</script>
 </body>
 </html>

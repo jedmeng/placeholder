@@ -3,7 +3,16 @@
 require ('Placeholder.class.php');
 
 // 参数数组
-$opts = array();
+$opts = array(
+	'width' => '',
+	'height' => '',
+	'size' => '',
+	'format' => '',
+	'text' => '',
+	'fontSize' => '',
+	'color' => '',
+	'bgColor' => ''
+);
 
 // 如果使用了rewrite，从path中提取参数
 if (isset($_SERVER['REDIRECT_URL'])) {
@@ -17,7 +26,7 @@ if (isset($_SERVER['REDIRECT_URL'])) {
 }
 
 // 从query中提取参数
-$args = ['width', 'height', 'format', 'text', 'size', 'fontSize', 'color', 'bgColor'];
+$args = array_keys($opts);
 
 foreach ($args as $arg) {
 	if (isset($_GET[$arg])) {
