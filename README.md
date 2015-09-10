@@ -38,55 +38,55 @@
 ## 示例：
 ### 1. 基本用法
 
->[http://{domain}/80](http://{domain}/80)
-> - ![80x80的占位图](http://{domain}/80)
+>[http://{domain}/80](http://img.jedm.cn/80)
+> - ![80x80的占位图](http://img.jedm.cn/80)
 >
->[http://{domain}/100x50](http://{domain}/100x50)
->![100x50的占位图](http://{domain}/100x50)
+>[http://{domain}/100x50](http://img.jedm.cn/100x50)
+>![100x50的占位图](http://img.jedm.cn/100x50)
 
 ### 2. 指定背景色
 
->[http://{domain}/80/lightblue](http://{domain}/80/lightblue)
->![80x80的占位图，背景为天蓝色](http://{domain}/80/lightblue)
+>[http://{domain}/80/lightblue](http://img.jedm.cn/80/lightblue)
+>![80x80的占位图，背景为天蓝色](http://img.jedm.cn/80/lightblue)
 >
->[http://{domain}/100x50/0072e4](http://{domain}/100x50/0072e4)
->![100x50的占位图，背景为蓝色](http://{domain}/100x50/0072e4)
+>[http://{domain}/100x50/0072e4](http://img.jedm.cn/100x50/0072e4)
+>![100x50的占位图，背景为蓝色](http://img.jedm.cn/100x50/0072e4)
 
 ### 3. 指定字体颜色
 
->[http://{domain}/80/lightblue/navy](http://{domain}/80/lightblue/navy)
->![80x80的占位图，背景为浅蓝色，字体为深蓝色](http://{domain}/80/lightblue/navy)
+>[http://{domain}/80/lightblue/navy](http://img.jedm.cn/80/lightblue/navy)
+>![80x80的占位图，背景为浅蓝色，字体为深蓝色](http://img.jedm.cn/80/lightblue/navy)
 >
->[http://{domain}/100x50//brown](http://{domain}/100x50//brown)
->![100x50的占位图，字体为棕色](http://{domain}/100x50//brown)
+>[http://{domain}/100x50//brown](http://img.jedm.cn/100x50//brown)
+>![100x50的占位图，字体为棕色](http://img.jedm.cn/100x50//brown)
 
 ### 4. 指定文字
 
->[http://{domain}/80/lightblue/navy/75Team](http://{domain}/80/lightblue/navy/75Team)
->![80x80的占位图，背景为浅蓝色，字体为深蓝色，内容为hello world!](http://{domain}/80/lightblue/navy/75Team)
+>[http://{domain}/80/lightblue/navy/75Team](http://img.jedm.cn/80/lightblue/navy/75Team)
+>![80x80的占位图，背景为浅蓝色，字体为深蓝色，内容为hello world!](http://img.jedm.cn/80/lightblue/navy/75Team)
 >
->[http://{domain}/100x50///Hello World!](http://{domain}/100x50///Hello World!)
->![100x50的占位图，内容为75Team](http://{domain}/100x50///Hello World!)
+>[http://{domain}/100x50///Hello World!](http://img.jedm.cn/100x50///Hello World!)
+>![100x50的占位图，内容为75Team](http://img.jedm.cn/100x50///Hello World!)
 
 ### 5. 指定格式
 
->[http://{domain}/80.png](http://{domain}/80.png)
->![80x80的占位图，格式为png](http://{domain}/80.png)
+>[http://{domain}/80.png](http://img.jedm.cn/80.png)
+>![80x80的占位图，格式为png](http://img.jedm.cn/80.png)
 >
->[http://{domain}/100x50/0072e4.jpg](http://{domain}/100x50/0072e4.jpg)
->![100x50的占位图，背景为蓝色，格式为gif](http://{domain}/100x50/0072e4.gif)
+>[http://{domain}/100x50/0072e4.jpg](http://img.jedm.cn/100x50/0072e4.jpg)
+>![100x50的占位图，背景为蓝色，格式为gif](http://img.jedm.cn/100x50/0072e4.gif)
 
 ### 6. 以query形式访问
 
->[http://{domain}?size=80](http://{domain}?size=80)
->![80x80的占位图](http://{domain}?size=80)
+>[http://{domain}?size=80](http://img.jedm.cn?size=80)
+>![80x80的占位图](http://img.jedm.cn?size=80)
 >
->[http://{domain}?size=100x50&text=Hello World!](http://{domain}?size=100x50&text=Hello World!)
->![100x50的占位图，内容为75Team](http://{domain}?size=100x50&text=Hello World!)
+>[http://{domain}?size=100x50&text=Hello World!](http://img.jedm.cn?size=100x50&text=Hello World!)
+>![100x50的占位图，内容为75Team](http://img.jedm.cn?size=100x50&text=Hello World!)
 >
->[http://{domain}?size=80&bgColor=lightblue&color=navy&text=75Team](http://{domain}?size=80&bgColor=lightblue&color=navy&text=75Team)
->![80x80的占位图，背景为浅蓝色，字体为深蓝色，内容为hello world!](http://{domain}?size=80&bgColor=lightblue&color=navy&text=75Team)
+>[http://{domain}?size=80&bgColor=lightblue&color=navy&text=75Team](http://img.jedm.cn?size=80&bgColor=lightblue&color=navy&text=75Team)
+>![80x80的占位图，背景为浅蓝色，字体为深蓝色，内容为hello world!](http://img.jedm.cn?size=80&bgColor=lightblue&color=navy&text=75Team)
 >
 >*也可以混合使用*
->[http://{domain}/80.png?text=Hello World!](http://{domain}/80.png?text=Hello World!)
->![80x80的占位图，内容为hello world!，格式为png](http://{domain}/80.png?text=Hello World!)
+>[http://{domain}/80.png?text=Hello World!](http://img.jedm.cn/80.png?text=Hello World!)
+>![80x80的占位图，内容为hello world!，格式为png](http://img.jedm.cn/80.png?text=Hello World!)
