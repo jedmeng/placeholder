@@ -69,7 +69,7 @@ class Placeholder {
 	private $bgColor;
 
 	function __construct($args = array()) {
-		$keys = ['width', 'height', 'format', 'text', 'size', 'color', 'bgColor'];
+		$keys = array('width', 'height', 'format', 'text', 'size', 'color', 'bgColor');
 
 		foreach ($keys as $key) {
 			if (!empty($args[$key])) {

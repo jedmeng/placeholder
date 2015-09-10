@@ -42,7 +42,7 @@
 				gfm: true,
 				breaks: true
 			});
-			var html = marked(text.replace(/\({domain\}|img.jedm.cn)/g, location.host));
+			var html = marked(text.replace(/(\{domain\}|img.jedm.cn)/g, location.host));
 			$('#content').html(html);
 		})
 	});
